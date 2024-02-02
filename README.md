@@ -49,8 +49,7 @@ To start the Expo development server and run the app:
 npx expo start
 ```
 This command will open a webpage where you can choose to run the app on an iOS simulator, Android emulator, or your physical device using the Expo Go app.
-## Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
