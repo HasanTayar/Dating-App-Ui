@@ -30,3 +30,19 @@ export type DatesData = {
   city: string;
   country: string;
 };
+interface ChatMessage {
+  sender: string;
+  message: string;
+  timestamp: string;
+}
+export type ChatData = {
+  id: number;
+  name: string;
+  imgUrl: number;
+  age: number;
+  isOnline: boolean;
+  lastMessage: string;
+  date: string;
+  timeSent: string;
+  chat: ChatMessage[];
+};

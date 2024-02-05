@@ -10,7 +10,7 @@ import {
   user8,
   user9,
 } from "../../assets/images";
-import { DatesData, UserData } from "../types";
+import { ChatData, DatesData, UserData } from "../types";
 
 export const userData: UserData[] = [
   {
@@ -96,7 +96,7 @@ export const userData: UserData[] = [
   },
 ];
 
-export const chatData = [
+export const chatData: ChatData[] = [
   {
     id: 1,
     name: "Betty",
