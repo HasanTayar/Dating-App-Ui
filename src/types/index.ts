@@ -2,14 +2,14 @@ import { ImageProps } from "react-native";
 
 export type RootStackParamList = {
   Welcome: undefined;
-  ChatDetails: undefined; // Add parameters if any, e.g., { userId: string }
+  ChatDetails: { params: ChatData };
   HomeTabs: undefined;
 };
 
 export type HomeTabParamList = {
   Home: undefined;
   Profile: undefined;
-  Chat: undefined;
+  Chat: ChatData;
 };
 
 export type UserData = {
@@ -30,7 +30,7 @@ export type DatesData = {
   city: string;
   country: string;
 };
-interface ChatMessage {
+export interface ChatMessage {
   sender: string;
   message: string;
   timestamp: string;
@@ -44,5 +44,5 @@ export type ChatData = {
   lastMessage: string;
   date: string;
   timeSent: string;
-  chat: ChatMessage[];
+  chat?: ChatMessage[];
 };

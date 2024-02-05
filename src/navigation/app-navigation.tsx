@@ -2,12 +2,12 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import WelcomeScreen from "../screens/welcome-screen";
-import ChatDetailsScreen from "../screens/chat/chat-details-screen";
-import ChatScreen from "../screens/chat/chat-screen";
+import ChatDetailsScreen from "../screens/chat/chat-screen";
 import ProfileScreen from "../screens/profile-screen";
 import HomeScreen from "../screens/home-screen";
 import { HomeTabParamList, RootStackParamList } from "../types";
 import { Ionicons } from "@expo/vector-icons";
+import ChatDetails from "../screens/chat/chat-details-screen";
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator<HomeTabParamList>();
 
@@ -48,7 +48,7 @@ const AppNavigation = () => {
       >
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Profile" component={ProfileScreen} />
-        <Tab.Screen name="Chat" component={ChatScreen} />
+        <Tab.Screen name="Chat" component={ChatDetailsScreen} />
       </Tab.Navigator>
     );
   };
@@ -62,7 +62,7 @@ const AppNavigation = () => {
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen
           name="ChatDetails"
-          component={ChatDetailsScreen}
+          component={ChatDetails}
           options={{
             presentation: "modal",
           }}
